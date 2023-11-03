@@ -1,0 +1,41 @@
+# The domain includes details of international football players, including teams they paly for, caps, goals etc. 
+BASE <http://theplayers.org/#>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foot: <http://footample.org/vocabulary#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Class
+foot:Player rdfs:Type rdfs:Class ;
+    rdfs:label "Player" .
+
+foot:Position rdfs:Type rdfs:Class ;
+    rdfs:label "Position" .
+
+foot:Team rdfs:Type rdfs:Class ;
+    rdfs:label "Team" .
+
+foot:homeCountry rdfs:Type rdfs:Class ;
+    rdfs:label "Country" .
+
+foot:striker rdfs:Type rdfs:Class ;
+    rdfs:label "Striker" ;
+rdfs:subClassOf foot:Position .
+
+
+# Property
+foot:isPosition rdfs:Type rdfs:Property;
+    rdfs:domain foot:Player ;
+    rdfs:range foot:Position . 
+
+foot:playsFor rdfs:Type rdfs:Property;
+    rdfs:domain foot:Player ;
+    rdfs:range foot:Team . 
+
+foot:isNationality rdfs:Type rdfs:Property;
+    rdfs:domain foot:Player ;
+    rdfs:range foot:homeCountry . 
+
+# Players
+<Lionel-Messi> rdfs:label "Lionel Messi"@en .
+<Lionel-Messi> foot:isNationality "test" .
