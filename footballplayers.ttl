@@ -37,5 +37,10 @@ foot:isNationality rdfs:Type rdfs:Property;
     rdfs:range foot:homeCountry . 
 
 # Players
-<Lionel-Messi> rdfs:label "Lionel Messi"@en .
-<Lionel-Messi> foot:isNationality "test" .
+foot:Messi rdfs:label "Lionel Messi" ;
+        foot:isNationality "Argentina" ;
+        foot:isPosition foot:striker .
+
+foot:Kane rdfs:label "Harry Kane" ;
+        foot:isNationality "England" ;
+        foot:isPosition foot:striker .
